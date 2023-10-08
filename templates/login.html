@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Inline CSS for demonstration purposes */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            padding-right: 200px; /* Adjust the right padding as needed */
+            background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+        }
+        .left-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .form-container {
+            flex: 1;
+            padding: 20px;
+            max-width: 400px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%;
+        }
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+        .create-account-link {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .create-account-link:hover {
+            text-decoration: underline;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            padding-left: 500px;
+        }
+        .subtext {
+            font-size: 16px;
+            color: #777;
+            margin-top: 10px;
+            padding-left: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-content">
+            <h1 class="title">Report Generator</h1>
+            <p class="subtext">We help you generate business insights.</p>
+        </div>
+        <div class="form-container">
+            <h1>Login</h1>
+            <form method="POST" action="/login">
+                <label for="username">Username:</label>
+                <input class="form-input" type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input class="form-input" type="password" id="password" name="password" required>
+
+                <input class="form-button" type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a class="create-account-link" href="/create_account">Create Account</a></p>
+        </div>
+    </div>
+</body>
+</html>

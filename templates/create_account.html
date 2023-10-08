@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Inline CSS for demonstration purposes */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            padding-right: 650px; /* Adjust the right padding as needed */
+            background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+        }
+        .form-container {
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%;
+        }
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+        .create-account-link {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .create-account-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Create Account</h1>
+            <form method="POST" action="/create_account">
+                <label for="username">Username</label>
+                <input class="form-input" type="text" id="username" name="username" required>
+
+                <label for="first_name">First Name</label>
+                <input class="form-input" type="text" id="first_name" name="first_name" required>
+
+                <label for="last_name">Last Name</label>
+                <input class="form-input" type="text" id="last_name" name="last_name" required>
+
+                <label for="email_id">Email</label>
+                <input class="form-input" type="email" id="email_id" name="email_id" required>
+
+                <label for="password">Password</label>
+                <input class="form-input" type="password" id="password" name="password" required>
+
+                <label for="department">Department</label>
+                <input class="form-input" type="text" id="department" name="department" required>
+
+                <label for="designation">Designation</label>
+                <input class="form-input" type="text" id="designation" name="designation" required>
+
+                <label for="location">Location</label>
+                <input class="form-input" type="text" id="location" name="location" required>
+
+                <input class="form-button" type="submit" value="Create Account">
+            </form>
+            <p>Already have an account? <a class="create-account-link" href="/login">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
